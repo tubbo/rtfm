@@ -1,3 +1,4 @@
+require 'rack/logger'
 
 # The PORO responsible for enumerating over the public dirs that are
 # documentation paths.
@@ -35,6 +36,10 @@ module RTFM
 
     def base_glob
       @base_glob ||= "#{base}/*"
+    end
+
+    def logger
+      @logger ||= Rack::Logger.new STDOUT
     end
   end
 end
