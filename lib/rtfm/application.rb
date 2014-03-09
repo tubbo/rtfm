@@ -8,6 +8,10 @@ require 'rtfm/documentation'
 
 module RTFM
   class Application < Sinatra::Application
+    # Look for files in ./public of this repo, not in the ./lib/rtfm
+    # folder.
+    set :public_folder, File.expand_path('./public')
+
     # The index page, where we will actually perform the action of
     # finding directories in `/srv/pro/public` and rendering to the screen.
     get "/" do
