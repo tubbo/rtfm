@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# Run the RTFM Rack server on port 3000
+
+bundle exec rackup -p 3000

@@ -1,0 +1,16 @@
+%html
+  %head
+    %title TelVue Documentation Server
+    %link{ rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/css/foundation.min.css' }
+
+  %body
+    %header.row
+      %h1 TelVue Documentation Server
+    %section.row
+      - if @apps.any?
+        %ul#apps
+          - @apps.each do |app_doc|
+            %li.app
+              %a{ href: "#{app_doc}/frames.html" }= app_doc
+      - else
+        .none There are no apps to display.

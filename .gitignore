@@ -1,0 +1,10 @@
+*.rbc
+.bundle
+.config
+.yardoc
+InstalledFiles
+_yardoc
+doc/
+lib/bundler/man
+pkg
+tmp
