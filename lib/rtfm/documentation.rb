@@ -13,7 +13,7 @@ module RTFM
     end
 
     def self.all
-      new "/srv/pro/public/*"
+      new RTFM.base_dir
     end
 
     def each
@@ -28,9 +28,13 @@ module RTFM
     end
 
     def public_dirs
-      @public_dirs ||= Dir[base].select do |path|
+      @public_dirs ||= Dir[base_glob].select do |path|
         File.directory? path
       end
+    end
+
+    def base_glob
+      @base_glob ||= "#{base}/*"
     end
   end
 end

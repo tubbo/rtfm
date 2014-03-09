@@ -9,5 +9,11 @@ require 'rtfm/application'
 # navigate all of the documentation we have.
 
 module RTFM
-  # Code goes here.
+  class << self
+    attr_accessor :base_dir
+
+    def base_dir
+      @base_dir ||= "/srv/pro/public"
+    end
+  end
 end
