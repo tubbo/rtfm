@@ -13,7 +13,7 @@ module RTFM
     attr_accessor :base_dir
 
     def base_dir
-      @base_dir ||= "/srv/pro/public"
+      @base_dir ||= ENV['RTFM_BASE_DIR'] || "/srv/pro/public"
     end
   end
 end
