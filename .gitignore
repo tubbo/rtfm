@@ -8,3 +8,4 @@ doc/
 lib/bundler/man
 pkg
 tmp
+public/**
