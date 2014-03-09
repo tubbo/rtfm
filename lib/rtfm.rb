@@ -16,7 +16,7 @@ module RTFM
 
   # Base directory of documentation.
   def self.base_dir
-    @base_dir ||= ENV['RTFM_BASE_DIR'] || "/srv/pro/public"
+    @base_dir ||= ENV['RTFM_BASE_DIR'] || "/srv/doc/public"
   end
 
   def self.log

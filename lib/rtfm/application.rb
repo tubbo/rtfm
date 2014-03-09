@@ -15,7 +15,7 @@ module RTFM
     set :public_folder, File.expand_path('./public')
 
     # The index page, where we will actually perform the action of
-    # finding directories in `/srv/pro/public` and rendering to the screen.
+    # finding directories in `/srv/doc/public` and rendering to the screen.
     get "/" do
       @app_names = Documentation.all
       haml :index
