@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'haml'
 require 'redcarpet'
+require 'rtfm'
 require 'rtfm/documentation'
 
 # A Sinatra application acting as the "index page" of the entire site.

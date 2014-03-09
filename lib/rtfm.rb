@@ -9,11 +9,22 @@ require 'rtfm/application'
 # navigate all of the documentation we have.
 
 module RTFM
-  class << self
-    attr_accessor :base_dir
+  # Environment that the server is running in.
+  def self.env
+    @env ||= ENV['RACK_ENV'] || 'development'
+  end
 
-    def base_dir
-      @base_dir ||= ENV['RTFM_BASE_DIR'] || "/srv/pro/public"
-    end
+  # Base directory of documentation.
+  def self.base_dir
+    @base_dir ||= ENV['RTFM_BASE_DIR'] || "/srv/pro/public"
+  end
+
+  def self.log
+    @log ||= Logger.new log_location
+  end
+
+  def self.log_location
+    return 'log/test.log' if env == 'test'
+    STDOUT
   end
 end

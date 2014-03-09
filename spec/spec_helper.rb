@@ -1,10 +1,8 @@
 $LOAD_PATH << File.expand_path('../lib')
 
+ENV['RACK_ENV'] = "test"
+ENV['RTFM_BASE_DIR'] = "spec/fixtures"
+
 require 'bundler/setup'
 require 'rspec'
 require 'rtfm'
-
-RSpec.configure do |config|
-  # Ensure we use the test dirs.
-  RTFM.base_dir = "spec/fixtures"
-end
