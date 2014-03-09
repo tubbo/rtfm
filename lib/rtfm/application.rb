@@ -15,7 +15,7 @@ module RTFM
     # The index page, where we will actually perform the action of
     # finding directories in `/srv/pro/public` and rendering to the screen.
     get "/" do
-      @apps = Documentation.all
+      @app_names = Documentation.all
       haml :index
     end
   end

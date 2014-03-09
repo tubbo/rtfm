@@ -2,15 +2,24 @@
   %head
     %title TelVue Documentation Server
     %link{ rel: 'stylesheet', href: '//cdnjs.cloudflare.com/ajax/libs/foundation/5.1.1/css/foundation.min.css' }
+    :css
+      .sub-nav li {
+        font-size: 24px;
+      }
 
   %body
     %header.row
       %h1 TelVue Documentation Server
     %section.row
-      - if @apps.any?
-        %ul#apps
-          - @apps.each do |app_doc|
-            %li.app
-              %a{ href: "#{app_doc}/frames.html" }= app_doc
+      :markdown
+        The following projects are TelVue Ruby apps and libraries with
+        [YARD documentation](http://yardoc.org) served on this site.
+        Click any of the links to be taken directly to the code's
+        developer documentation.
+      - if @app_names.any?
+        %ul.sub-nav
+          - @app_names.each do |name|
+            %li
+              %a{ href: "#{name}/frames.html", target: "_blank" }= name
       - else
         .none There are no apps to display.
