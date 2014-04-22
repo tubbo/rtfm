@@ -1,3 +1,0 @@
-#!/bin/sh
-echo "restarting RTFM..."
-restart rtfm
