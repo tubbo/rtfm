@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.1'
 
 gem 'sinatra'
 gem 'haml'
@@ -7,6 +8,8 @@ gem 'puma'
 
 group :development do
   gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-chruby'
   gem 'rake'
 end
 
