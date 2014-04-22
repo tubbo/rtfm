@@ -6,7 +6,8 @@ gem 'redcarpet'
 gem 'puma'
 
 group :development do
-  gem 'git-deploy'
+  gem 'capistrano'
+  gem 'rake'
 end
 
 group :test do
