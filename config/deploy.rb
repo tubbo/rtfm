@@ -2,13 +2,15 @@
 lock '3.2.0'
 
 set :application, 'rtfm'
-set :repo_url, 'git@github.com:telvue/rtfm.git'
+github_username = ENV['GITHUB_USERNAME']
+github_password = ENV['GITHUB_PASSWORD']
+set :repo_url, "https://#{github_username}:#{github_password}@github.com/telvue/rtfm.git"
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app
-set :deploy_to, '/srv/doc'
+set :deploy_to, '/srv/rtfm'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -26,10 +28,10 @@ set :deploy_to, '/srv/doc'
 # set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public}
+set :linked_dirs, %w{log vendor/bundle public}
 
 # Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+#set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5

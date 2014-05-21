@@ -2,4 +2,4 @@
 #
 # Run the RTFM Rack server on port 3000
 
-bundle exec puma -p $PORT
+bundle exec puma
