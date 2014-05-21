@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: http://mchammer:canttouchthis@rubygems.telvue.com/
   specs:
     capistrano (3.2.0)
       i18n
@@ -60,6 +61,10 @@ GEM
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
       term-ansicolor
+    telvue (0.0.4)
+      bundler (~> 1.5)
+      rake
+      yard
     term-ansicolor (1.3.0)
       tins (~> 1.0)
     tilt (1.4.1)
@@ -67,6 +72,7 @@ GEM
     websocket-driver (0.3.2)
     xpath (2.0.0)
       nokogiri (~> 1.3)
+    yard (0.8.7.4)
 
 PLATFORMS
   ruby
@@ -83,3 +89,4 @@ DEPENDENCIES
   redcarpet
   rspec
   sinatra
+  telvue

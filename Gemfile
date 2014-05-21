@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+source 'http://mchammer:canttouchthis@rubygems.telvue.com'
+
 ruby '2.1.1'
 
 gem 'sinatra'
@@ -11,6 +13,7 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-chruby'
   gem 'rake'
+  gem 'telvue'
 end
 
 group :test do

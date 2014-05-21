@@ -1,4 +1,5 @@
 require 'rspec/core/rake_task'
+require 'telvue/tasks'
 
 RSpec::Core::RakeTask.new :test
 
