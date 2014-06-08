@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 source 'http://mchammer:canttouchthis@rubygems.telvue.com'
 
-ruby '2.1.1'
+ruby '2.1.2'
 
 gem 'sinatra'
 gem 'haml'

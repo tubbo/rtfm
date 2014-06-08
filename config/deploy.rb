@@ -31,13 +31,13 @@ set :deploy_to, '/srv/rtfm'
 set :linked_dirs, %w{log vendor/bundle public}
 
 # Default value for default_env is {}
-#set :default_env, { path: "/opt/ruby/bin:$PATH" }
+set :default_env, { path: "#{shared_path}/vendor/bin:/opt/rubies/ruby-2.1.2/bin:$PATH" }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-# Use Ruby 2.1.1
-set :chruby_ruby, 'ruby-2.1.1'
+set :bundle_path, -> { shared_path.join 'vendor/bundle' }
+set :bundle_binstubs, -> { shared_path.join 'vendor/bin' }
 
 namespace :deploy do
 
